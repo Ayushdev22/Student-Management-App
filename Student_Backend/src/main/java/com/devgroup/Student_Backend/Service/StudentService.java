@@ -20,7 +20,7 @@ public class StudentService {
 
     public String saveData(Student student){
         studentRepository.save(student);
-        return "Student save Sucessfully";
+        return "Student save Sucessfully in DB";
     }
 
     public Student getData(Long rollNo){
@@ -43,7 +43,7 @@ public class StudentService {
         return studentist;
     }
 
-    // -------Dto method use ------
+    // -------Dto method used in service ------
 
     public List<StudentDto> findAllStudentByDto(){
         List<Student> studentList = studentRepository.findAll(); // entity list  db se aati hai
@@ -64,6 +64,7 @@ public class StudentService {
         return dtoList; // list ko return kiye
     }
 
+    
     public StudentDto findStudentByid(Long rollNo){
 
         Student student = studentRepository.findByRollNo(rollNo);

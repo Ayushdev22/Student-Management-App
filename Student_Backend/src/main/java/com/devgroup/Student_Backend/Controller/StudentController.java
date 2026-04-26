@@ -35,7 +35,7 @@ public class StudentController {
         return studentList;
     }
 
-   // ------ dto controller --------
+   // ------ dto controller  findAll  , findBYRollNo--------
 
    @GetMapping("/dtolist")
    public List<StudentDto> findAllDtoStudent(){
